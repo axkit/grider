@@ -40,6 +40,7 @@ type Grid struct {
 	IsFilterable   bool           `json:"isFilterable"`
 	NoPagination   bool           `json:"noPagination,omitempty"`
 	PaginationType PaginationType `json:"paginationType"`
+	TotalCount     int            `json:"totalCount,omitempty"` // total count of rows in accordance with applied filters
 	option         Option
 }
 
