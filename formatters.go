@@ -40,7 +40,7 @@ func formatAttribute(src reflect.Value, layout string) string {
 		}
 		res = v.(time.Time).Format(format)
 	case "date.Date":
-		res = (v.(*date.Date)).String()
+		res = (v.(date.Date)).String()
 	case "null.Time":
 		t := v.(null.Time)
 		if !t.Valid {
