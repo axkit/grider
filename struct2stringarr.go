@@ -302,10 +302,13 @@ func convertTagToGridColumn(titlePrefix string, parentAttribute, attribute strin
 			res.IconsAlign = k[1]
 		case "target":
 			res.Target = k[1]
+		case "bgColor":
+			res.BgColor = k[1]
+		case "fgColor":
+			res.FgColor = k[1]
 		}
 	}
 
 	//	fmt.Printf("res=%#v\n", res)
-
 	return res
 }

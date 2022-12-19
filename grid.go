@@ -25,6 +25,9 @@ type Column struct {
 	Icons      string `json:"icons,omitempty"`      // comma separated fa-* icon names
 	IconsAlign string `json:"ialign,omitempty"`     // default "" ("left") "right" - after text
 	Target     string `json:"target,omitempty"`     // default "" browser window target for opening link
+	BgColor    string `json:"bgColor,omitempty"`    // default "" background color
+	FgColor    string `json:"fgColor,omitempty"`    // default "" foreground color
+
 }
 
 // Grid describes data and metadata for presenting grid.
