@@ -125,7 +125,8 @@ func (r *Grid) Excelize(fname string) (*DownloadResponse, error) {
 						return nil, err
 					}
 					// Set underline and font color style for the cell.
-					style, err := f.NewStyle(`{"font":{"color":"#1265BE","underline":"single"}}`)
+//					style, err := f.NewStyle(`{"font":{"color":"#1265BE","underline":"single"}}`)
+					style, err := f.NewStyle(&excelize.Style{Font: &excelize.Font{Color: "#1265BE", Underline: "single"}})
 					if err == nil {
 						err = f.SetCellStyle(sch, cell, cell, style)
 					}

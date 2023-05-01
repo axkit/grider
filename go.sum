@@ -1,5 +1,5 @@
-github.com/axkit/date v0.3.0 h1:i2kdXeeR+Ns+rl9fSsak84L0w2gA2H/lJ/5UJmj2Umk=
-github.com/axkit/date v0.3.0/go.mod h1:rzrdioi20pV1+Y6dYmq4qX5xNqbLSRupJ4FwUUSrHYk=
+github.com/axkit/date v0.3.1 h1:WjRq8ugGm1I52cypBTJLBzM4j555TVrqLfXETwkKHkA=
+github.com/axkit/date v0.3.1/go.mod h1:rzrdioi20pV1+Y6dYmq4qX5xNqbLSRupJ4FwUUSrHYk=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gorilla/schema v1.2.0 h1:YufUaxZYCKGFuAq3c96BOhjgd5nmXiOY9NGzF247Tsc=
