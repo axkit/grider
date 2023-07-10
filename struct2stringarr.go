@@ -117,41 +117,41 @@ func ToSnakeCase(str string) string {
 }
 
 /*
-func convertTagToJSON(prefix string, tag string) string {
-	if tag == "" {
-		return "{}"
-	}
-
-	res := "{"
-	tags := strings.Split(tag, ",")
-	sep := ""
-	for i := range tags {
-		lay := "%s\"%s\":\"%s\""
-
-		k := strings.Split(tags[i], "=")
-		if len(k) < 2 {
-			panic("wrong tag" + tag)
+	func convertTagToJSON(prefix string, tag string) string {
+		if tag == "" {
+			return "{}"
 		}
-		k[0] = strings.TrimSpace(k[0])
-		k[1] = strings.TrimSpace(k[1])
 
-		switch k[0] {
-		case "fmt":
-			continue
-		case "href":
-			k[1] = addPrefixToColumn(k[1], prefix)
-		case "hidden", "sortable":
-			lay = "%s\"%s\":%s"
+		res := "{"
+		tags := strings.Split(tag, ",")
+		sep := ""
+		for i := range tags {
+			lay := "%s\"%s\":\"%s\""
+
+			k := strings.Split(tags[i], "=")
+			if len(k) < 2 {
+				panic("wrong tag" + tag)
+			}
+			k[0] = strings.TrimSpace(k[0])
+			k[1] = strings.TrimSpace(k[1])
+
+			switch k[0] {
+			case "fmt":
+				continue
+			case "href":
+				k[1] = addPrefixToColumn(k[1], prefix)
+			case "hidden", "sortable":
+				lay = "%s\"%s\":%s"
+			}
+			res += fmt.Sprintf(lay, sep, k[0], k[1])
+			sep = ","
 		}
-		res += fmt.Sprintf(lay, sep, k[0], k[1])
-		sep = ","
+		res += "}"
+
+		//println("tag=", res)
+
+		return res
 	}
-	res += "}"
-
-	//println("tag=", res)
-
-	return res
-}
 */
 func extractTagAttr(s, substr string) string {
 
@@ -306,6 +306,8 @@ func convertTagToGridColumn(titlePrefix string, parentAttribute, attribute strin
 			res.BgColor = k[1]
 		case "fgColor":
 			res.FgColor = k[1]
+		case "width":
+			res.Width = k[1]
 		}
 	}
 

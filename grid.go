@@ -27,7 +27,7 @@ type Column struct {
 	Target     string `json:"target,omitempty"`     // default "" browser window target for opening link
 	BgColor    string `json:"bgColor,omitempty"`    // default "" background color
 	FgColor    string `json:"fgColor,omitempty"`    // default "" foreground color
-
+	Width      string `json:"width,omitempty"`      // default "" column width
 }
 
 // Grid describes data and metadata for presenting grid.
